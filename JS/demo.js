@@ -235,4 +235,12 @@ for (var i=0;i<addToCart.length;i++){
         sessionStorage.setItem('count',counter);
         count.innerHTML=sessionStorage.getItem('count');
     })
+    addToCart[i].addEventListener('click',function(e){
+        var button=e.target;
+        var shopItem=button.parentElement;
+        console.log(shopItem)
+        var proName=shopItem.getElementsByClassName('desc')[0].innerHTML;
+        var proPrice=shopItem.getElementsByClassName('price')[0].innerHTML;
+        console.log(proName,proPrice)
+    })
 } 
